@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 35rem;
+  background-color: #fff;
+  padding: 2.5rem 2rem 4rem;
+  border-radius: 0.5rem;
+  margin: 10rem auto 2rem
+}
+
+.container h2 {
+  color: teal;
+  margin-bottom: 1.5rem;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.input-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.input-box button {
+  border: none;
+  outline: none;
+  background-color: teal;
+  color: #fff;
+  padding: 0.6rem 1.6rem;
+  cursor: pointer;
+  border-radius: 0 2.5rem 2.5rem 0;
+  font-size: 1.2rem;
+}
+
+.list-box li {
+  list-style: none;
+  padding: 1rem 0.5rem 1rem 3rem;
+  font-size: 1.1rem;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.list-box li::before {
+  content: '';
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url("../img/unchecked-checkbox.png");
+  background-size: cover;
+  background-position: center;
+  top: 1rem;
+  left: 0.2rem;
+}
+
+.list-box li.checked {
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.list-box li.checked::before {
+  background-image: url("../img/checked-checkbox.png");
+}
+
+.list-box li span {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  color: crimson;
+  background-color: #eee;
+  border-radius: 50%;
+}
